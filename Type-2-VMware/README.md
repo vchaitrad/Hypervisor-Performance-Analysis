@@ -55,10 +55,6 @@ sudo poweroff
 
 ## Screenshots
 
-## Screenshots
-
-## Screenshots
-
 - `lspu.jpg`, `lspu1.jpg` - `lscpu` output (CPU details)
 - `free -h.jpg` - `free -h` output (memory usage)
 - `Sysbench.jpg`, `sysbenchjpg.jpg` - Sysbench CPU test result
