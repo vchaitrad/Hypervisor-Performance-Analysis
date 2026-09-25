@@ -55,8 +55,11 @@ sudo poweroff
 
 ## Screenshots
 
-- `system-check.png` - `lscpu`, `free -h`,  output
-- `sysbench-result.png` - Sysbench CPU test result
+## Screenshots
+
+- `lspu.jpg`, `lspu1.jpg` - `lscpu` output (CPU details)
+- `free -h.jpg` - `free -h` output (memory usage)
+- `Sysbench.jpg`, `sysbenchjpg.jpg` - Sysbench CPU test result
 
 ## Result
 
