@@ -133,7 +133,7 @@ More screenshots and details are in the [Type-2-VMware](Type-2-VMware) folder.
 - Average Latency: 0.78 ms
 - Maximum Latency: 7.56 ms
 
-## Comparison
+## Performance Comparison Table
 
 | | Type-1 (Proxmox VE) | Type-2 (VMware Workstation) |
 |---|---|---|
@@ -142,9 +142,36 @@ More screenshots and details are in the [Type-2-VMware](Type-2-VMware) folder.
 | Events per Second | 1453.98 | 1277.56 |
 | Average Latency | 0.69 ms | 0.78 ms |
 
-Comparison graph is in the [Comparison](Comparison) folder.
+Comparison graphs and full details are in the [Comparison](Comparison) folder.
 
 Observation: In this test, Proxmox VE (Type-1) gave a higher events per second (1453.98) than VMware Workstation (Type-2) (1277.56), and also had lower average latency (0.69 ms vs 0.78 ms). Both VMs had the same configuration (2 vCPU, 2 GB RAM, 20 GB disk).
+
+## Metric Explanations & Visualizations
+
+- **Total Execution Time**: how long the Sysbench test ran for. Both tests ran for close to 10 seconds.
+- **Total Events**: total number of prime number calculations completed during the test. Higher is better.
+- **Events per Second**: how many calculations were done per second (throughput). Higher is better.
+- **Average Latency**: the average time taken per event. Lower is better.
+
+### Chart: CPU Throughput Comparison (Events per Second)
+
+![Events per second comparison](Comparison/comparison-events-per-second.png)
+
+### Chart: Average Latency Comparison
+
+![Average latency comparison](Comparison/comparison-avg-latency.png)
+
+### Chart: Total Events Comparison
+
+![Total events comparison](Comparison/comparison-total-events.png)
+
+### Overall Comparison Dashboard
+
+![Comparison dashboard](Comparison/comparison-dashboard.png)
+
+## Technical Analysis & Discussion
+
+Proxmox VE performed better in this test because it is a Type-1 hypervisor, which means it runs directly on the physical hardware. VMware Workstation is a Type-2 hypervisor, which runs on top of a host operating system, so the guest VM's requests have to pass through an extra layer (the host OS) before reaching the hardware. This extra layer adds some overhead, which is likely why VMware Workstation showed lower throughput and higher latency compared to Proxmox VE in this experiment.
 
 ## Commands Used
 
@@ -163,12 +190,14 @@ sudo poweroff
 
 ## Conclusion
 
-I made the same VM (2 vCPU, 2 GB RAM, 20 GB disk, Ubuntu) on Proxmox VE and VMware Workstation and ran the same Sysbench CPU test on both. In this test, Proxmox VE performed better in terms of events per second and average latency compared to VMware Workstation.
+I made the same VM (2 vCPU, 2 GB RAM, 20 GB disk, Ubuntu) on Proxmox VE and VMware Workstation and ran the same Sysbench CPU test on both. In this test, Proxmox VE performed better in terms of events per second and average latency compared to VMware Workstation, which matches what is expected for a Type-1 (bare-metal) hypervisor compared to a Type-2 (hosted) hypervisor.
 
-## Folder Structure
+## Repository Structure & Reproduction
 
 - `README.md` - main file with the steps and results
-- `LAB_REPORT.md` - lab report
+- `LAB_REPORT.md` - formal lab report
 - `Type-1-Proxmox` - screenshots and result of Proxmox VE
 - `Type-2-VMware` - screenshots and result of VMware Workstation
-- `Comparison` - comparison graph of both results
+- `Comparison` - comparison table, graphs and observation
+
+To reproduce this experiment: create an Ubuntu VM with the same configuration (2 vCPU, 2 GB RAM, 20 GB disk) on both a Type-1 and a Type-2 hypervisor, install Sysbench, and run `sysbench cpu --cpu-max-prime=20000 run` on both.
