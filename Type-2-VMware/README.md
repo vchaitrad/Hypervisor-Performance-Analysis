@@ -55,8 +55,7 @@ sudo poweroff
 
 ## Screenshots
 
-- `vm-settings.png` - VM settings in VMware
-- `system-check.png` - `lscpu`, `free -h`, `df -h` output
+- `system-check.png` - `lscpu`, `free -h`,  output
 - `sysbench-result.png` - Sysbench CPU test result
 
 ## Result
