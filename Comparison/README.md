@@ -13,7 +13,13 @@ This folder has the comparison graph and result comparison between Proxmox VE (T
 
 ## Graph
 
-![Comparison graph](comparison-graph.png)
+Events per Second:
+
+![Events per second comparison](comparison-events-per-second.png)
+
+Average Latency:
+
+![Average latency comparison](comparison-avg-latency.png)
 
 ## Which is Better
 
