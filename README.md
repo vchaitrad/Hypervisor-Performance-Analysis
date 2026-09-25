@@ -72,17 +72,7 @@ sysbench cpu --cpu-max-prime=20000 run
 
 ### Screenshots
 
-VM settings in Proxmox:
-
-![Proxmox VM settings](Type-1-Proxmox/vm-settings.png)
-
-System check (`lscpu`, `free -h`, `df -h`):
-
-![Proxmox system check](Type-1-Proxmox/system-check.png)
-
-Sysbench result:
-
-![Proxmox sysbench result](Type-1-Proxmox/sysbench-result.png)
+More screenshots and details are in the [Type-1-Proxmox](Type-1-Proxmox) folder.
 
 ---
 
@@ -121,17 +111,7 @@ sysbench cpu --cpu-max-prime=20000 run
 
 ### Screenshots
 
-VM settings in VMware:
-
-![VMware VM settings](Type-2-VMware/vm-settings.png)
-
-System check (`lscpu`, `free -h`, `df -h`):
-
-![VMware system check](Type-2-VMware/system-check.png)
-
-Sysbench result:
-
-![VMware sysbench result](Type-2-VMware/sysbench-result.png)
+More screenshots and details are in the [Type-2-VMware](Type-2-VMware) folder.
 
 ---
 
@@ -139,32 +119,30 @@ Sysbench result:
 
 ### Type-1: Proxmox VE
 
-- Total Execution Time: To be added
-- Total Events: To be added
-- Events per Second: To be added
-- Average Latency: To be added
+- Total Execution Time: 10.0030s
+- Total Events: 14548
+- Events per Second: 1453.98
+- Average Latency: 0.69 ms
 
 ### Type-2: VMware Workstation
 
-- Total Execution Time: To be added
-- Total Events: To be added
-- Events per Second: To be added
-- Minimum Latency: To be added
-- Average Latency: To be added
-- Maximum Latency: To be added
+- Total Execution Time: 10.0008s
+- Total Events: 12778
+- Events per Second: 1277.56
+- Minimum Latency: 0.65 ms
+- Average Latency: 0.78 ms
+- Maximum Latency: 7.56 ms
 
 ## Comparison
 
 | | Type-1 (Proxmox VE) | Type-2 (VMware Workstation) |
 |---|---|---|
-| Total Execution Time | To be added | To be added |
-| Total Events | To be added | To be added |
-| Events per Second | To be added | To be added |
-| Average Latency | To be added | To be added |
+| Total Execution Time | 10.0030s | 10.0008s |
+| Total Events | 14548 | 12778 |
+| Events per Second | 1453.98 | 1277.56 |
+| Average Latency | 0.69 ms | 0.78 ms |
 
-Comparison graph:
-
-![Comparison graph](Comparison/comparison-graph.png)
+Comparison graph is in the [Comparison](Comparison) folder.
 
 Observation: To be added.
 
@@ -185,12 +163,12 @@ sudo poweroff
 
 ## Conclusion
 
-I made the same VM (2 vCPU, 2 GB RAM, 20 GB disk, Ubuntu) on Proxmox VE and VMware Workstation and ran the same Sysbench CPU test on both. Final conclusion will be added after I fill in my results.
+I made the same VM (2 vCPU, 2 GB RAM, 20 GB disk, Ubuntu) on Proxmox VE and VMware Workstation and ran the same Sysbench CPU test on both. To be added.
 
 ## Folder Structure
 
 - `README.md` - main file with the steps and results
 - `LAB_REPORT.md` - lab report
-- `Type-1-Proxmox` - screenshots of Proxmox VE
-- `Type-2-VMware` - screenshots of VMware Workstation
+- `Type-1-Proxmox` - screenshots and result of Proxmox VE
+- `Type-2-VMware` - screenshots and result of VMware Workstation
 - `Comparison` - comparison graph of both results
