@@ -144,7 +144,7 @@ More screenshots and details are in the [Type-2-VMware](Type-2-VMware) folder.
 
 Comparison graph is in the [Comparison](Comparison) folder.
 
-Observation: To be added.
+Observation: In this test, Proxmox VE (Type-1) gave a higher events per second (1453.98) than VMware Workstation (Type-2) (1277.56), and also had lower average latency (0.69 ms vs 0.78 ms). Both VMs had the same configuration (2 vCPU, 2 GB RAM, 20 GB disk).
 
 ## Commands Used
 
@@ -163,7 +163,7 @@ sudo poweroff
 
 ## Conclusion
 
-I made the same VM (2 vCPU, 2 GB RAM, 20 GB disk, Ubuntu) on Proxmox VE and VMware Workstation and ran the same Sysbench CPU test on both. To be added.
+I made the same VM (2 vCPU, 2 GB RAM, 20 GB disk, Ubuntu) on Proxmox VE and VMware Workstation and ran the same Sysbench CPU test on both. In this test, Proxmox VE performed better in terms of events per second and average latency compared to VMware Workstation.
 
 ## Folder Structure
 
