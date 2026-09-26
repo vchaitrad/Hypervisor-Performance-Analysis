@@ -206,7 +206,7 @@ sudo poweroff
 
 I made the same VM (2 vCPU, 2 GB RAM, 20 GB disk, Ubuntu) on Proxmox VE and VMware Workstation and ran the same Sysbench CPU test on both. In this test, Proxmox VE performed better in terms of events per second and average latency compared to VMware Workstation, which matches what is expected for a Type-1 (bare-metal) hypervisor compared to a Type-2 (hosted) hypervisor.
 
-## Repository Structure & Reproduction
+## Repository Structure 
 
 - `README.md` - main file with the steps and results
 - `LAB_REPORT.md` - formal lab report
