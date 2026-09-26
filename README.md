@@ -155,19 +155,33 @@ Observation: In this test, Proxmox VE (Type-1) gave a higher events per second (
 
 ### Chart: CPU Throughput Comparison (Events per Second)
 
-![Events per second comparison](Comparison/comparison-events-per-second.png)
+```mermaid
+xychart-beta
+    title "Events per Second"
+    x-axis ["Proxmox VE (Type-1)", "VMware Workstation (Type-2)"]
+    y-axis "Events per Second" 0 --> 1600
+    bar [1453.98, 1277.56]
+```
 
-### Chart: Average Latency Comparison
+### Chart: Average Latency Comparison (ms)
 
-![Average latency comparison](Comparison/comparison-avg-latency.png)
+```mermaid
+xychart-beta
+    title "Average Latency (ms)"
+    x-axis ["Proxmox VE (Type-1)", "VMware Workstation (Type-2)"]
+    y-axis "Latency (ms)" 0 --> 1
+    bar [0.69, 0.78]
+```
 
 ### Chart: Total Events Comparison
 
-![Total events comparison](Comparison/comparison-total-events.png)
-
-### Overall Comparison Dashboard
-
-![Comparison dashboard](Comparison/comparison-dashboard.png)
+```mermaid
+xychart-beta
+    title "Total Events"
+    x-axis ["Proxmox VE (Type-1)", "VMware Workstation (Type-2)"]
+    y-axis "Total Events" 0 --> 16000
+    bar [14548, 12778]
+```
 
 ## Technical Analysis & Discussion
 
