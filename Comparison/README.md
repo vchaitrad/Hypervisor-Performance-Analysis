@@ -20,19 +20,37 @@ This folder has the comparison graphs and result comparison between Proxmox VE (
 
 ## Graphs
 
+## Graphs
+
 ### Chart 1: CPU Throughput Comparison (Events per Second)
 
-![Events per second comparison](comparison-events-per-second.png)
+```mermaid
+xychart-beta
+    title "Events per Second"
+    x-axis ["Proxmox VE (Type-1)", "VMware Workstation (Type-2)"]
+    y-axis "Events per Second" 0 --> 1600
+    bar [1453.98, 1277.56]
+```
 
-### Chart 2: Average Latency Comparison
+### Chart 2: Average Latency Comparison (ms)
 
-![Average latency comparison](comparison-avg-latency.png)
+```mermaid
+xychart-beta
+    title "Average Latency (ms)"
+    x-axis ["Proxmox VE (Type-1)", "VMware Workstation (Type-2)"]
+    y-axis "Latency (ms)" 0 --> 1
+    bar [0.69, 0.78]
+```
 
 ### Chart 3: Total Events Comparison
 
-![Total events comparison](comparison-total-events.png)
-
-### Overall Comparison Dashboard
+```mermaid
+xychart-beta
+    title "Total Events"
+    x-axis ["Proxmox VE (Type-1)", "VMware Workstation (Type-2)"]
+    y-axis "Total Events" 0 --> 16000
+    bar [14548, 12778]
+```
 
 ![Comparison dashboard](comparison-dashboard.png)
 
